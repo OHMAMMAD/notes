@@ -1,0 +1,37 @@
+.no-notes-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.first-para-container {
+  width: 400px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.discription-para {
+  color: #898998;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.daily-notes-para {
+  margin-top: 60px;
+  margin-bottom: 40px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.notes-logo-img {
+  margin-top: 15vh;
+}
+
+.get-started-button {
+  border: none;
+  background-color: #6f6fc8;
+  color: white;
+  padding: 20px 25px;
+  font-size: 22px;
+  border-radius: 60px;
+}

@@ -1,0 +1,78 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0px;
+}
+
+.notes-header {
+  color: white;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+}
+
+.note-amount-para {
+  margin-bottom: 30px;
+  color: #ffbf47aa;
+}
+
+.search-field {
+  border: none;
+  background-color: inherit;
+  margin-right: 30px;
+  border-bottom: 1px solid #ffbf47;
+  font-size: 20px;
+  width: 180px;
+  color: white;
+  font-family: "Source Code Pro", monospace;
+  outline: none;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.search-button {
+  border: none;
+  background-color: inherit;
+  font-size: 30px;
+  color: #54505f;
+  transition: color 300ms;
+}
+.search-button:hover {
+  color: rgb(180, 180, 180);
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 250px);
+  gap: 20px;
+}
+
+.add-note-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  right: 40px;
+  align-items: center;
+  bottom: 50px;
+  border: 1px solid #6f6fc8;
+  background-color: #6f6fc8;
+  color: white;
+  font-size: 30px;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  transition: background-color 200ms, color 200ms, border 200ms;
+  box-shadow: 5px 5px 10px 10px rgb(0, 0, 0, 0.2);
+}
+
+.add-note-button:hover {
+  color: #6f6fc8;
+  background-color: #aaaaaa;
+  border: 1px solid #aaaaaa;
+}

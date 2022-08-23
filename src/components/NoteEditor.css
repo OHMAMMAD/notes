@@ -1,0 +1,84 @@
+.editor-header-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0px;
+  color: #4e4a59;
+}
+
+.editor-title-input {
+  font-size: 32px;
+  font-weight: 600;
+  background-color: inherit;
+  color: white;
+  border: none;
+  outline: none;
+}
+
+.editor-note-discription {
+  display: flex;
+  padding: 30px 0px;
+  margin-bottom: 30px;
+  color: #848394;
+  font-weight: 600;
+}
+.editor-note-discription * {
+  margin-right: 10px;
+}
+
+.note-editor {
+  width: 100%;
+  height: 100vh;
+  padding: 0px 40px;
+}
+
+.notes-para {
+  font-size: 25px;
+  margin-left: 25px;
+}
+
+.editor-text-container {
+  height: 100%;
+}
+
+.editor-textarea {
+  color: var(--main-text-color);
+  background-color: inherit;
+  outline: none;
+  border: none;
+  resize: none;
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+}
+
+.go-back-button {
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: inherit;
+  font-size: 40px;
+  font-weight: 400;
+  color: inherit;
+  padding: 10px;
+  transition: color 300ms;
+  cursor: pointer;
+}
+
+.go-back-button:hover {
+  color: white;
+}
+
+.editor-save-button {
+  border: none;
+  color: inherit;
+  background-color: inherit;
+  font-size: 25px;
+  vertical-align: center;
+  cursor: pointer;
+  transition: color 300ms;
+  padding: 20px 0px 20px 20px;
+}
+
+.editor-save-button:hover {
+  color: white;
+}
