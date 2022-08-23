@@ -26,6 +26,7 @@
 
 .note-text {
   color: #848394;
+  white-space: pre-line;
 }
 
 .note-buttons-container {

@@ -35,7 +35,11 @@ class NotesContainer extends React.Component {
         <p className="note-amount-para">{this.props.notes.length} notes</p>
         <div className="notes-grid">
           {this.props.notes
-            .filter((note) => note.title.includes(this.state.searchTerm)) // filter notes by search term
+            .filter((note) =>
+              note.title
+                .toLowerCase()
+                .includes(this.state.searchTerm.toLowerCase())
+            ) // filter notes by search term
             .map((note, key) => (
               <Note
                 key={key}

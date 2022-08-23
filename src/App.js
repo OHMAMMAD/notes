@@ -42,10 +42,6 @@ class App extends React.Component {
       // ],
       selectedNote: "", // the note that the editor opens
     };
-
-    if (localStorage.getItem("notes") !== null) {
-      this.setState({ notes: JSON.parse(localStorage.getItem("notes")) });
-    }
   }
 
   returnRandomUnUsedId() {
@@ -99,34 +95,27 @@ class App extends React.Component {
   }
 
   handleNoteCopy(note) {
-    let newNote = note;
-    newNote.title += "- Copy";
-    newNote.id = this.returnRandomUnUsedId();
-    let newNotes = this.state.notes;
-    newNotes.push(note);
-
-    this.setState({ notes: newNotes }, this.updateLocalStorage());
+    this.handleAddNote(note.text, note.title + " - Copy", false);
   }
 
-  handleAddNote() {
+  handleAddNote(text = "", title = "Title", openEditor = true) {
     let newNotes = this.state.notes;
     if (newNotes.length > MAX_NOTES - 1) {
       alert(`Error: You Can't Have More Than ${MAX_NOTES} Notes`);
       return;
     }
     let newNote = {
-      text: "",
-      title: "Title",
+      text: text,
+      title: title,
       id: this.returnRandomUnUsedId(),
       creationDate: new Date().toLocaleDateString(),
     };
 
     newNotes.push(newNote);
 
-    this.setState(
-      { selectedNote: newNote, notes: newNotes },
-      this.updateLocalStorage()
-    );
+    openEditor && this.setState({ selectedNote: newNote });
+
+    this.setState({ notes: newNotes }, this.updateLocalStorage());
   }
 
   updateLocalStorage() {

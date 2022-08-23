@@ -55,7 +55,15 @@ class NoteEditor extends React.Component {
         <div className="editor-note-discription">
           <p>{this.props.note.creationDate}</p>
           <p>|</p>
-          <p>{this.state.text.split(" ").length} words</p>
+          <p>
+            {
+              this.state.text
+                .trim()
+                .split(" ")
+                .filter((str) => str !== "").length
+            }{" "}
+            words
+          </p>
         </div>
         <div className="editor-text-container">
           <textarea

@@ -28,7 +28,10 @@ class Note extends React.Component {
         onMouseOut={() => this.setState({ mouseOver: false })}
       >
         <p className="note-title">{this.props.note.title}</p>
-        <p className="note-text">{this.props.note.text}</p>
+        <p className="note-text">
+          {this.props.note.text.slice(0, 100)}
+          {this.props.note.text.length > 100 ? "...." : ""}
+        </p>
         <div
           className="note-buttons-container"
           style={{ opacity: this.state.mouseOver ? "1" : "0" }}
